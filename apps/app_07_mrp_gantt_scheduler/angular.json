@@ -18,11 +18,17 @@
             "tsConfig": "tsconfig.app.json",
             "styles": [
               "src/styles.scss"
+            ],
+            "polyfills": [
+              "zone.js"
             ]
           }
         },
         "serve": {
-          "builder": "@angular/build:dev-server"
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "mrp-gantt-scheduler:build"
+          }
         }
       }
     }

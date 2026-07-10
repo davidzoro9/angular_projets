@@ -18,13 +18,22 @@
             "tsConfig": "tsconfig.app.json",
             "styles": [
               "src/styles.scss"
+            ],
+            "polyfills": [
+              "zone.js"
             ]
           }
         },
         "serve": {
-          "builder": "@angular/build:dev-server"
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "subscription-billing-portal:build"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b08c5968-497a-4414-8798-7640bb27bb04"
   }
 }
