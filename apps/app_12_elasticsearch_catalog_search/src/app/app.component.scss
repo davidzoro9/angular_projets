@@ -1,0 +1,38 @@
+// Component stylesheet
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+}
+.app-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin: 0 0 6px 0;
+  }
+  .subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+
+.search-bar-ui { margin-top: 15px; input { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; color: #fff; } }
+.facets-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-top: 15px; }
+.filters { font-size: 0.8rem; h4 { margin-bottom: 8px; } }
+.prod-item { background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: 6px; font-size: 0.85rem; }
+        
+.footer-links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #475569;
+}

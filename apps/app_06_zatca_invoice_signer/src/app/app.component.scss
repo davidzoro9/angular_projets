@@ -1,0 +1,44 @@
+// Component stylesheet
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+}
+.app-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #10b981;
+    margin: 0 0 6px 0;
+  }
+  .subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+
+.signing-panel { margin-top: 20px; }
+.cert-status { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 12px; border-radius: 6px; font-size: 0.9rem; .success { color: #34d399; } }
+.invoice-table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  th, td { text-align: left; padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.85rem; }
+}
+.success-badge { background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+.btn-sign { background: #10b981; border: none; color: #fff; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: bold; }
+        
+.footer-links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #475569;
+}

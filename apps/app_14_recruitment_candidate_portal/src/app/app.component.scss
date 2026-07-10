@@ -1,0 +1,39 @@
+// Component stylesheet
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 24px;
+}
+.app-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #8b5cf6;
+    margin: 0 0 6px 0;
+  }
+  .subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+
+.workflow-steps { display: flex; justify-content: space-between; margin-top: 25px; gap: 10px; }
+.step { flex: 1; padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 6px; font-size: 0.75rem; text-align: center;
+  &.done { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+  &.active { background: rgba(139, 92, 246, 0.2); border: 1px solid #8b5cf6; color: #c084fc; font-weight: 700; }
+}
+        
+.footer-links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #475569;
+}
