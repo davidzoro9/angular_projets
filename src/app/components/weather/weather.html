@@ -1,0 +1,48 @@
+<div class="weather-card">
+  <div class="card-header">
+    <h3>RxJS Search & Weather Dashboard</h3>
+    <span class="badge-status">Reactive Stream (switchMap)</span>
+  </div>
+
+  <div class="search-container">
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery" 
+      (ngModelChange)="onSearchChange($value)"
+      placeholder="Type a city (e.g., Paris, London, Ouagadougou, Tokyo)..."
+      class="search-input"
+    />
+    <div class="loader-spinner" *ngIf="loading"></div>
+  </div>
+
+  <div class="error-banner" *ngIf="errorMessage">
+    ⚠️ {{ errorMessage }}
+  </div>
+
+  <!-- Async Pipe Subscription -->
+  <div class="weather-info" *ngIf="weather$ | async as weather; else noData">
+    <div class="city-name">{{ weather.city }}</div>
+    <div class="weather-temp-row">
+      <span class="weather-icon">{{ weather.icon }}</span>
+      <span class="temp">{{ weather.temp }}°C</span>
+    </div>
+    <div class="condition">{{ weather.condition }}</div>
+    
+    <div class="metrics-grid">
+      <div class="metric-item">
+        <span class="label">Humidity</span>
+        <span class="value">{{ weather.humidity }}%</span>
+      </div>
+      <div class="metric-item">
+        <span class="label">Wind</span>
+        <span class="value">{{ weather.wind }} km/h</span>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <div class="no-data-msg" *ngIf="!loading && !errorMessage">
+      <p>Start typing a city to see the reactive search results in real time.</p>
+    </div>
+  </ng-template>
+</div>

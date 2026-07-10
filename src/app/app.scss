@@ -1,0 +1,115 @@
+// Main Application SCSS Layout
+$bg-primary: #0f172a;
+$bg-surface: rgba(30, 41, 59, 0.4);
+$accent-color: #dd0031; // Angular Red
+$text-light: #f8fafc;
+$text-muted: #64748b;
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: $bg-primary;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(220, 38, 38, 0.05) 0px, transparent 50%);
+  color: $text-light;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .app-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+
+      .logo-angular {
+        color: $accent-color;
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-shadow: 0 0 15px rgba($accent-color, 0.4);
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+      }
+    }
+
+    .header-subtitle {
+      color: $text-muted;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .app-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 16px;
+
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        transform: translateY(-1px);
+      }
+
+      &.active {
+        background: linear-gradient(135deg, rgba($accent-color, 0.15) 0%, rgba(124, 58, 237, 0.1) 100%);
+        border-color: rgba($accent-color, 0.4);
+        color: #f8fafc;
+        box-shadow: 0 4px 20px rgba($accent-color, 0.15);
+      }
+    }
+  }
+
+  .app-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .app-footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    p {
+      color: $text-muted;
+      font-size: 0.85rem;
+    }
+  }
+}

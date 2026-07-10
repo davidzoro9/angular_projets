@@ -1,0 +1,44 @@
+<div class="app-dashboard">
+  <!-- Top Banner -->
+  <header class="app-header">
+    <div class="header-logo">
+      <span class="logo-angular">▲</span>
+      <h1>Angular Developer Showcase</h1>
+    </div>
+    <p class="header-subtitle">
+      Demonstrations of modern state-management (Signals) and reactive programming (RxJS streams)
+    </p>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="app-tabs">
+    <button 
+      [class.active]="activeTab() === 'weather'" 
+      (click)="setTab('weather')"
+      class="tab-btn"
+    >
+      🌦️ Weather Search (RxJS Pipeline)
+    </button>
+    <button 
+      [class.active]="activeTab() === 'kanban'" 
+      (click)="setTab('kanban')"
+      class="tab-btn"
+    >
+      📋 Task Board (Angular Signals)
+    </button>
+  </nav>
+
+  <!-- Main Content Showcase -->
+  <main class="app-content">
+    <div *ngIf="activeTab() === 'weather'">
+      <app-weather></app-weather>
+    </div>
+    <div *ngIf="activeTab() === 'kanban'">
+      <app-kanban></app-kanban>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>Angular Workspace created by David Zorom • Lead ERP & Frontend Developer</p>
+  </footer>
+</div>
