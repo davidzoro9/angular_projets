@@ -870,11 +870,17 @@ for i, proj in enumerate(PROJECTS, 1):
                             "index": "src/index.html",
                             "browser": "src/main.ts",
                             "tsConfig": "tsconfig.app.json",
+                            "polyfills": [
+                                "zone.js"
+                            ],
                             "styles": ["src/styles.scss"]
                         }
                     },
                     "serve": {
-                        "builder": "@angular/build:dev-server"
+                        "builder": "@angular/build:dev-server",
+                        "options": {
+                            "buildTarget": f"{proj['name']}:build"
+                        }
                     }
                 }
             }
